@@ -61,25 +61,37 @@ public class MainMenuManager : MonoBehaviour
     }
 
     // Function to show a panel by name
-    public void ShowPanel(string panel)
+    public void SwitchPanel(string panel)
     {
         foreach (var kvp in panels)
         {
             if (kvp.Key.panelName == panel)
             {
                 kvp.Value.SetActive(true); // Show the specified panel
-                if(kvp.Key.subPanel)
-                {
-                    kvp.Value.gameObject.transform.localScale = new Vector3(0,0,0);
-                    kvp.Value.gameObject.transform.DOScale(new Vector3(1, 1, 1), 0.3f);
-                }
+                kvp.Value.gameObject.transform.localScale = new Vector3(0,0,0);
+                kvp.Value.gameObject.transform.DOScale(new Vector3(1, 1, 1), 0.3f);
             }
             else
             {
                 kvp.Value.gameObject.transform.DOScale(new Vector3(0,0,0), 0.3f);
-                //kvp.Value.SetActive(false); // Hide all other panels
             }
         }
+    }
+    public void Show(string panel)
+    {
+        foreach (var kvp in panels)
+        {
+            if (kvp.Key.panelName == panel)
+            {
+                kvp.Value.SetActive(true); // Show the specified panel
+                kvp.Value.gameObject.transform.localScale = new Vector3(0, 0, 0);
+                kvp.Value.gameObject.transform.DOScale(new Vector3(1, 1, 1), 0.3f);
+            }
+        }
+    }
+    public void loadGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
     }
 }
 [Serializable]

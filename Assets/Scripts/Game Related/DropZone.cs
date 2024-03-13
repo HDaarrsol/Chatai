@@ -26,7 +26,6 @@ public class DropZone : MonoBehaviour,IDrop
     {
         dropCollider = GetComponent<BoxCollider2D>();
         this.gameObject.GetComponent<SpriteGlowEffect>().enabled = false;
-        //Destroy(this.gameObject.GetComponentInChildren<SpriteRenderer>(true));
         Destroy(GetComponent<CardObject>());
         dropCollider.gameObject.SetActive(true);
     }

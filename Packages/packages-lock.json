@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.deveshbeniwal.unityuiscreencontroller": {
-      "version": "https://github.com/deveshbeniwal/Unity-UI-Screen-Controller.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "dba9f72b85c642de9fdfcd4066c339194a02452d"
-    },
     "com.elringus.spriteglow": {
       "version": "https://github.com/elringus/sprite-glow.git#package",
       "depth": 0,

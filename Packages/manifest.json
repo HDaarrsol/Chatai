@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.deveshbeniwal.unityuiscreencontroller": "https://github.com/deveshbeniwal/Unity-UI-Screen-Controller.git",
     "com.elringus.spriteglow": "https://github.com/elringus/sprite-glow.git#package",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.collab-proxy": "2.2.0",
